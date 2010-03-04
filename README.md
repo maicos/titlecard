@@ -1,6 +1,8 @@
 Input
 ----
 * itemlist.csv
+* template.haml
+* cards.sass
 
 Output
 ----

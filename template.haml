@@ -1,0 +1,24 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{ :content => "text/html;charset=UTF-8", "http-equiv" => "content-type" }
+    %link{:type => 'text/css', :rel => :stylesheet, :href => 'card.css'}
+  %body
+    - works.each do |i|
+      .card<>
+        .inner_box
+          - n = i.title.split(//u).length
+          - if n < 5
+            %h2
+              = i.title
+          - elsif n < 10
+            %h2{:style => "font-size: 6mm"}
+              = i.title
+          - else
+            %h2{:style => "font-size: %dmm;" % [60 / i.title.split(//u).length]}
+              = i.title
+          %h3
+            = i.author
+          %p.material
+            = "(%s)" % [i.material]
+            
