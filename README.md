@@ -1,3 +1,7 @@
+Usage
+----
+`% ruby titlecard.rb`
+
 Input
 ----
 * itemlist.csv
